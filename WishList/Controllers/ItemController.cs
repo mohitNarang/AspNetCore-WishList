@@ -36,7 +36,7 @@ namespace WishList.Controllers
 
         public IActionResult Delete(int Id)
         {
-            Item itemToDelete = _context.Items.FirstOrDefault(e => e.Id == Id);
+            var itemToDelete = _context.Items.FirstOrDefault(e => e.Id == Id);
             //var itemToDelete = _context.Items.Find(Id);
             _context.Remove(itemToDelete);
             _context.SaveChanges();
